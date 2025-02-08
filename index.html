@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora de Funciones</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div id="particles-js"></div>
+
+  <div class="container">
+    <div id="calculator-card" class="card">
+      <div class="card-body">
+        <h2 class="card-title text-center neonGlow">*****Calculadora de Funciones*****</h2>
+        <form id="calcForm">
+          <div class="form-group">
+            <label for="funcionInput">Ingresa la función f(x):</label>
+            <input type="text" class="form-control" id="funcionInput" placeholder="Ejemplo: sin(x)/x">
+          </div>
+          <div class="form-group">
+            <label for="opcionSelect">Seleccione el cálculo:</label>
+            <select class="form-control" id="opcionSelect">
+              <option value="funcion">Función</option>
+              <option value="derivada">Derivada</option>
+              <option value="integral">Integral</option>
+              <option value="limite">Límite</option>
+            </select>
+          </div>
+          <div class="form-group" id="valorGroup">
+            <label for="valorInput" id="valorLabel">Valor para evaluar f(x):</label>
+            <input type="number" class="form-control" id="valorInput" placeholder="Ingresa un valor">
+          </div>
+          <button type="submit" class="btn btn-custom btn-block jelly">Calcular</button>
+          <button type="button" id="limpiarBtn" class="btn btn-danger btn-block jelly mt-2">Limpiar</button>
+        </form>
+      </div>
+    </div>
+    <div id="plot"></div>
+  </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.5.0/math.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
